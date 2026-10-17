@@ -1,25 +1,111 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CIMA Vision</title>
-  <meta name="description" content="CIMA Vision — fotografía y consultoría de imagen.">
-  <style>
-    :root { --bg:#f6f2ec; --fg:#1d1b19; --muted:#6f6a63; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#141312; --fg:#f1ece4; --muted:#9a948a; } }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; }
-    body { background: var(--bg); color: var(--fg); font-family: Georgia, "Times New Roman", serif;
-           display: grid; place-items: center; padding: 24px; text-align: center; }
-    h1 { font-weight: 400; font-size: clamp(2rem, 7vw, 3.5rem); letter-spacing: .12em; margin: 0 0 .5rem; text-transform: uppercase; }
-    p { color: var(--muted); margin: 0; font-size: 1.05rem; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CIMA Vision — Fotografía y consultoría de imagen</title>
+<meta name="description" content="Fotografía de equipo y marca personal para ejecutivos y empresas en Ciudad de México. Sesiones, content days, team summits y retainer mensual.">
+<meta property="og:title" content="CIMA Vision">
+<meta property="og:description" content="Subamos a la cima juntos. Fotografía y consultoría de imagen.">
+<meta property="og:image" content="https://cimavision.co/img/m03.jpg">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>CIMA Vision</h1>
-    <p>Fotografía y consultoría de imagen. Sitio nuevo en camino.</p>
-  </main>
+<header class="top">
+  <a href="#top" aria-label="CIMA Vision, inicio"><img src="logo.png" alt="CIMA" width="46" height="46"></a>
+  <nav><a href="#trabajo">Trabajo</a><a href="#servicios">Servicios</a><a href="#faq">Preguntas</a><a class="wa-link" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." rel="noopener">WhatsApp</a></nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="copy">
+    <h1>Subamos<br>a la cima<br>juntos</h1>
+    <p>Fotografía de equipo y marca personal, con consultoría de imagen antes de la sesión.</p>
+    <div><a class="btn" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." rel="noopener">Escríbenos por WhatsApp</a></div>
+  </div>
+  <div class="ph"><img src="img/m01.jpg" width="1350" height="1800" alt="Retrato de Marcelo sentado frente a un muro verde y azul" fetchpriority="high"></div>
+</section>
+
+<section class="sec work" id="trabajo">
+  <div class="meta">
+    <h2>Trabajo</h2>
+    <p>Cobertura de la entrevista a Marcelo en El Nido de adidas: retratos, detalles y el cuarto completo.</p>
+  </div>
+  <div class="mosaic">
+    <figure class="a wide"><img src="img/m03.jpg" width="1800" height="1350" loading="lazy" alt="Entrevista en un set verde con la frase You Got This"></figure>
+    <figure class="b tall"><img src="img/m04.jpg" width="1350" height="1800" loading="lazy" alt="Marcelo explicando con las manos, con un balón bajo el pie"></figure>
+    <figure class="c tall"><img src="img/m06.jpg" width="1350" height="1800" loading="lazy" alt="Detalle de manos y reloj sobre la playera Chavarría"></figure>
+    <figure class="d wide"><img src="img/m05.jpg" width="1800" height="1350" loading="lazy" alt="Marcelo sonriendo, mirando fuera de cuadro"></figure>
+    <figure class="e tall"><img src="img/m11.jpg" width="1350" height="1800" loading="lazy" alt="Marcelo ajustándose los lentes"></figure>
+    <figure class="f wide"><img src="img/m10.jpg" width="1800" height="1350" loading="lazy" alt="Tenis adidas Superstar sobre un balón"></figure>
+    <figure class="g wide"><img src="img/m09.jpg" width="1800" height="1350" loading="lazy" alt="Marcelo sentado, escuchando una pregunta"></figure>
+  </div>
+</section>
+
+<section class="sec" id="servicios">
+  <h2>Servicios</h2>
+  <p class="lede">Eliges el formato según el tamaño de tu equipo y qué tan seguido necesitas contenido. Todo incluye retoque editorial.</p>
+
+  <div class="price"><h3>Pop-Up Days<small>Agilidad</small></h3>
+    <div><p style="margin:0">30 minutos de sesión dirigida, en fecha y lugar fijos cada mes.</p><ul><li>3 fotos con retoque editorial</li><li>Optimizadas para la red social que elijas</li></ul></div>
+    <div class="n">$1,700<small>MXN</small></div></div>
+
+  <div class="price"><h3>Signature Sessions<small>Agilidad</small></h3>
+    <div><p style="margin:0">60 minutos de sesión dirigida en estudio profesional.</p><ul><li>10 fotos con retoque editorial</li><li>2 vestuarios</li></ul></div>
+    <div class="n">$3,000<small>MXN</small></div></div>
+
+  <div class="price"><h3>Content Day<small>Ecosistema</small></h3>
+    <div><p style="margin:0">Todo tu contenido en un día: 2 horas para generar el stock visual de tu marca.</p><ul><li>Fotos de equipo y estilo de vida en tu oficina, corporativo o coworking</li><li>Procesos y cultura de la organización</li><li>Video recap de 1 minuto</li></ul></div>
+    <div class="n">$5,000<small>MXN</small></div></div>
+
+  <div class="price"><h3>Team Summit<small>Ecosistema</small></h3>
+    <div><p style="margin:0">Jornada de 4 a 6 horas para tener fotos consistentes de todo el equipo.</p><ul><li>En estudio: mínimo 5 fotos por persona</li><li>En locación: mínimo 35 fotos de stock visual</li><li>3 reels de equipo</li></ul></div>
+    <div class="n">$6,000<small>MXN hasta 10 personas<br>$8,500 hasta 15 personas<br>Making of: $2,000</small></div></div>
+
+  <div class="price"><h3>CIMA Retainer<small>Consistencia</small></h3>
+    <div><p style="margin:0">Tu departamento visual externo.</p><ul><li>1 sesión de 2 horas al mes, en el lugar que elijas</li><li>15 fotografías editoriales</li><li>4 clips verticales para redes</li></ul></div>
+    <div class="n">$4,500<small>MXN al mes · contrato mínimo de 3 meses</small></div></div>
+
+  <p class="note">¿Un equipo más grande o una red completa? Armamos cotizaciones a la medida.</p>
+</section>
+
+<section class="sec std" id="estandar">
+  <h2>El estándar CIMA</h2>
+  <dl>
+    <div><dt>CIMA Vault</dt><dd>Tu material queda resguardado 12 meses en una galería privada, con acceso para todo el equipo.</dd></div>
+    <div><dt>Licencia comercial</dt><dd>Certificado de derechos de uso ilimitado en medios digitales.</dd></div>
+    <div><dt>Style Brief</dt><dd>Consultoría estética previa: moodboard de intención y guía de vestimenta para que el equipo se vea alineado.</dd></div>
+    <div><dt>Scouting digital</dt><dd>Revisamos la luz y los espacios antes de la sesión para asegurar el resultado.</dd></div>
+  </dl>
+</section>
+
+<section class="sec" id="faq">
+  <h2>Preguntas</h2>
+  <details><summary>¿Cómo aparto mi fecha?</summary><p>Con el 50% de anticipo. El otro 50% se paga el día de la sesión. En el Retainer el pago es mensual y automático.</p></details>
+  <details><summary>¿Cuánto tarda la entrega?</summary><p>Tu galería privada de CIMA Vault está lista y optimizada entre 5 y 7 días hábiles después de la sesión.</p></details>
+  <details><summary>¿Qué incluye el Style Brief?</summary><p>Un moodboard de intención y una guía de vestimenta detallada para que tu equipo luzca alineado y con un estándar de alta gama.</p></details>
+  <details><summary>¿Hacen cotizaciones personalizadas?</summary><p>Sí. Para estructuras y redes más grandes, escríbenos y coordinamos un plan escalable.</p></details>
+</section>
+
+<section class="sec cta" id="contacto">
+  <h2>¿Listos?</h2>
+  <div class="row">
+    <a class="btn" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." rel="noopener">Escríbenos por WhatsApp</a>
+    <a class="btn ghost" href="https://instagram.com/cima_vision" rel="noopener">@cima_vision</a>
+  </div>
+</section>
+</main>
+
+<footer><span>© 2026 CIMA Vision</span><span>Ciudad de México</span></footer>
+
+<dialog id="lb" aria-label="Foto ampliada"><button type="button" aria-label="Cerrar">CERRAR</button><img alt=""></dialog>
+<script>
+(function(){var d=document.getElementById('lb'),im=d.querySelector('img');
+document.querySelectorAll('.mosaic figure').forEach(function(f){f.addEventListener('click',function(){var i=f.querySelector('img');im.src=i.src;im.alt=i.alt;d.showModal()})});
+d.addEventListener('click',function(){d.close()});})();
+</script>
 </body>
 </html>
