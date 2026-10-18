@@ -97,3 +97,11 @@ script_inicio = (
 )
 escribir("index.html", pagina("/", "CIMA Vision — Fotografía y consultoría de imagen", DESC, inicio, inicio=True).replace("</body>", script_inicio + "</body>"))
 print("Listo:", ", ".join(["/"] + ["/" + k for k in PAGINAS]))
+
+
+# sitemap y robots
+FECHA = "2026-10-18"
+rutas = ["/"] + ["/" + k for k in PAGINAS]
+urls = "\n".join("  <url><loc>https://cimavision.co%s</loc><lastmod>%s</lastmod></url>" % (r, FECHA) for r in rutas)
+escribir("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n' % urls)
+escribir("robots.txt", "User-agent: *\nAllow: /\n\nSitemap: https://cimavision.co/sitemap.xml\n")
