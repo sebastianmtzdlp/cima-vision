@@ -24,24 +24,29 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="top solid"><a href="/" aria-label="CIMA Vision, inicio"><img src="logo.png" alt="CIMA" width="46" height="46"></a><nav><a href="/trabajo">Trabajo</a><a href="/nosotros" aria-current="page">Nosotros</a><a href="/servicios">Servicios</a><a href="/preguntas">Preguntas</a><a class="wa-link" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." rel="noopener">WhatsApp</a></nav></header>
+<header class="top solid"><a class="logo" href="/">CIMA VISION</a><nav class="main" aria-label="Principal"><a href="/trabajo">Trabajo</a><a href="/nosotros" aria-current="page">Nosotros</a><a href="/servicios">Servicios</a><a href="/preguntas">Preguntas</a><a class="btn btn-sm" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." target="_blank" rel="noopener">WhatsApp</a></nav></header>
 
-<main id="top" class="page">
-<section class="sec about" id="nosotros">
-  <h2>Nosotros</h2>
-  <div class="txt">
-    <p>CIMA Vision es una agencia de fotografía y consultoría de imagen de la Ciudad de México. Creemos que la imagen es una herramienta de trabajo: abre puertas, genera confianza y hace que la gente te recuerde.</p>
-    <p>Dirigimos cada sesión desde la idea hasta la entrega, para que tú solo tengas que llegar. Dirección creativa: Pasha.</p>
+<main id="top">
+<section style="padding-top:150px">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Nosotros</p>
+      <h1 style="font-size:clamp(3.6rem,8vw,7rem)">Quiénes somos</h1>
+      <p class="lead" style="margin-top:24px">CIMA Vision es una agencia de fotografía y consultoría de imagen de la Ciudad de México. Creemos que la imagen es una herramienta de trabajo: abre puertas, genera confianza y hace que la gente te recuerde.</p>
+      <p class="lead" style="margin-top:16px">Dirigimos cada sesión desde la idea hasta la entrega, para que tú solo tengas que llegar.</p>
+      <p style="margin-top:24px;font-size:1.1rem"><b>Dirección creativa:</b> Pasha.</p>
+    </div>
   </div>
 </section>
-<nav class="next" aria-label="Más páginas"><a href="/estandar"><span>← Anterior</span>Así se sube</a><a class="sig" href="/preguntas"><span>Siguiente →</span>Preguntas</a></nav>
+<div class="wrap pager"><a href="/estandar">← Así se sube</a><a href="/preguntas">Preguntas →</a></div>
 </main>
-<footer><span>© 2026 CIMA Vision</span><span>Ciudad de México</span></footer>
+<footer><span>© 2026 CIMA Vision · Ciudad de México</span><a href="https://instagram.com/cima_vision" rel="noopener" style="text-decoration:none">Instagram @cima_vision</a></footer>
+<a class="wa" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." target="_blank" rel="noopener">WhatsApp</a>
 
 <dialog id="lb" aria-label="Foto ampliada"><button type="button" aria-label="Cerrar">CERRAR</button><img alt=""></dialog>
 <script>
 (function(){var d=document.getElementById('lb'),im=d.querySelector('img');
-document.querySelectorAll('.mosaic figure').forEach(function(f){f.addEventListener('click',function(){var i=f.querySelector('img');im.src=i.src;im.alt=i.alt;d.showModal()})});
+document.querySelectorAll('.gal img').forEach(function(i){i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;d.showModal()})});
 d.addEventListener('click',function(){d.close()});})();
 </script>
 </body>

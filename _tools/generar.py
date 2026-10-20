@@ -39,9 +39,9 @@ def rellenar(texto, valores):
     return texto
 
 
-MENU = ('<nav><a href="/trabajo"{t}>Trabajo</a><a href="/nosotros"{n}>Nosotros</a>'
+MENU = ('<nav class="main" aria-label="Principal"><a href="/trabajo"{t}>Trabajo</a><a href="/nosotros"{n}>Nosotros</a>'
         '<a href="/servicios"{s}>Servicios</a><a href="/preguntas"{p}>Preguntas</a>'
-        '<a class="wa-link" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." rel="noopener">WhatsApp</a></nav>')
+        '<a class="btn btn-sm" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." target="_blank" rel="noopener">WhatsApp</a></nav>')
 
 
 def menu(actual=""):
@@ -52,9 +52,9 @@ def menu(actual=""):
 
 def pagina(ruta, titulo, descripcion, contenido, inicio=False, actual=""):
     if inicio:
-        cab = '<header class="top"><a href="/" aria-label="CIMA Vision, inicio"><img src="logo.png" alt="CIMA" width="46" height="46"></a>' + menu(actual) + "</header>\n\n"
+        cab = '<header class="top"><a class="logo" href="/">CIMA VISION</a>' + menu(actual) + "</header>\n\n"
     else:
-        cab = '<header class="top solid"><a href="/" aria-label="CIMA Vision, inicio"><img src="logo.png" alt="CIMA" width="46" height="46"></a>' + menu(actual) + "</header>\n\n"
+        cab = '<header class="top solid"><a class="logo" href="/">CIMA VISION</a>' + menu(actual) + "</header>\n\n"
     t = rellenar(cabeza, {"ruta": ruta, "titulo": titulo, "descripcion": descripcion})
     return t + "<body>\n" + cab + contenido + "\n" + pie + "</body>\n</html>\n"
 
@@ -65,30 +65,17 @@ for i, k in enumerate(PAGINAS):
     cont = leer(k + ".html")
     anterior = PAGINAS[i - 1] if i > 0 else None
     siguiente = PAGINAS[i + 1] if i < len(PAGINAS) - 1 else None
-    nav = '<nav class="next" aria-label="Más páginas">'
-    if anterior:
-        nav += '<a href="/%s"><span>← Anterior</span>%s</a>' % (anterior, TITULOS[anterior])
-    if siguiente:
-        nav += '<a class="sig" href="/%s"><span>Siguiente →</span>%s</a>' % (siguiente, TITULOS[siguiente])
-    nav += "</nav>"
-    cont = '<main id="top" class="page">\n' + cont + nav + "\n</main>"
+    nav = '<div class="wrap pager">'
+    nav += '<a href="/%s">← %s</a>' % (anterior, TITULOS[anterior]) if anterior else '<span></span>'
+    nav += '<a href="/%s">%s →</a>' % (siguiente, TITULOS[siguiente]) if siguiente else '<a href="/">Inicio →</a>'
+    nav += "</div>"
+    cont = '<main id="top">\n' + cont + nav + "\n</main>"
     titulo = "%s — %s" % (TITULOS[k], SITIO)
     escribir(k + ".html", pagina("/" + k, titulo, DESC, cont, actual=k))
 
 # inicio: portada, qué hacemos y acceso a las demás páginas
 que = leer("que-hacemos.html")
-enlaces = []
-resumen = {
-    "trabajo": "Un set, una entrevista y los detalles que cuentan la historia.",
-    "servicios": "Del retrato rápido al departamento visual completo.",
-    "estandar": "El camino de cuatro pasos, siempre el mismo.",
-    "nosotros": "Quiénes somos y cómo dirigimos cada sesión.",
-    "preguntas": "Anticipos, entregas y cotizaciones.",
-    "contacto": "Escríbenos y armamos el plan.",
-}
-for k in PAGINAS:
-    enlaces.append('<a href="/%s">%s<span>%s</span></a>' % (k, TITULOS[k], resumen[k]))
-inicio = (hero + "\n" + que + '\n<nav class="paginas" aria-label="Páginas">\n' + "\n".join(enlaces) + "\n</nav>\n</main>\n")
+inicio = hero + "\n" + que + "</main>\n"
 inicio = '<main id="top">\n' + inicio
 script_inicio = (
     "<script>\n/* enlaces viejos (#trabajo, ?s=trabajo, #faq) llevan a la página nueva */\n"

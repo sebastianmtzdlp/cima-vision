@@ -24,27 +24,26 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="top solid"><a href="/" aria-label="CIMA Vision, inicio"><img src="logo.png" alt="CIMA" width="46" height="46"></a><nav><a href="/trabajo">Trabajo</a><a href="/nosotros">Nosotros</a><a href="/servicios">Servicios</a><a href="/preguntas">Preguntas</a><a class="wa-link" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." rel="noopener">WhatsApp</a></nav></header>
+<header class="top solid"><a class="logo" href="/">CIMA VISION</a><nav class="main" aria-label="Principal"><a href="/trabajo">Trabajo</a><a href="/nosotros">Nosotros</a><a href="/servicios">Servicios</a><a href="/preguntas">Preguntas</a><a class="btn btn-sm" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." target="_blank" rel="noopener">WhatsApp</a></nav></header>
 
-<main id="top" class="page">
-<section class="sec std" id="estandar">
-  <h2>Así se sube</h2>
-  <p class="lede light">El estándar CIMA: un camino de cuatro pasos, siempre el mismo, para que el resultado no dependa de la suerte.</p>
-  <ol class="steps">
-    <li><h3>Style Brief</h3><p>Consultoría estética previa. Te mandamos un moodboard de intención y una guía de vestimenta para que el equipo llegue alineado.</p></li>
-    <li><h3>Scouting digital</h3><p>Revisamos la luz y los espacios antes de la sesión, para que el día sea sencillo y el resultado de alta gama.</p></li>
-    <li><h3>Sesión y retoque editorial</h3><p>Te dirigimos durante la sesión. Después elegimos y retocamos las mejores fotos.</p></li>
-    <li><h3>CIMA Vault y licencia comercial</h3><p>Entregamos en 5 a 7 días hábiles, en una galería privada que guardamos 12 meses para todo tu equipo. Incluye certificado de derechos de uso ilimitado en medios digitales.</p></li>
-  </ol>
+<main id="top">
+<section style="padding-top:150px">
+  <div class="wrap">
+    <p class="kicker">Así se sube</p>
+    <h1 style="font-size:clamp(3.6rem,8vw,7rem)">El estándar CIMA</h1>
+    <p class="lead" style="margin-top:24px">Un camino de cuatro pasos, siempre el mismo, para que el resultado no dependa de la suerte.</p>
+    <div class="steps" style="margin-top:64px"><div><b>01</b><h3>Style Brief</h3><p>Consultoría estética previa. Te mandamos un moodboard de intención y una guía de vestimenta para que el equipo llegue alineado.</p></div><div><b>02</b><h3>Scouting digital</h3><p>Revisamos la luz y los espacios antes de la sesión, para que el día sea sencillo y el resultado de alta gama.</p></div><div><b>03</b><h3>Sesión y retoque editorial</h3><p>Te dirigimos durante la sesión. Después elegimos y retocamos las mejores fotos.</p></div><div><b>04</b><h3>CIMA Vault y licencia comercial</h3><p>Entregamos en 5 a 7 días hábiles, en una galería privada que guardamos 12 meses para todo tu equipo. Incluye certificado de derechos de uso ilimitado en medios digitales.</p></div></div>
+  </div>
 </section>
-<nav class="next" aria-label="Más páginas"><a href="/servicios"><span>← Anterior</span>Servicios</a><a class="sig" href="/nosotros"><span>Siguiente →</span>Nosotros</a></nav>
+<div class="wrap pager"><a href="/servicios">← Servicios</a><a href="/nosotros">Nosotros →</a></div>
 </main>
-<footer><span>© 2026 CIMA Vision</span><span>Ciudad de México</span></footer>
+<footer><span>© 2026 CIMA Vision · Ciudad de México</span><a href="https://instagram.com/cima_vision" rel="noopener" style="text-decoration:none">Instagram @cima_vision</a></footer>
+<a class="wa" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." target="_blank" rel="noopener">WhatsApp</a>
 
 <dialog id="lb" aria-label="Foto ampliada"><button type="button" aria-label="Cerrar">CERRAR</button><img alt=""></dialog>
 <script>
 (function(){var d=document.getElementById('lb'),im=d.querySelector('img');
-document.querySelectorAll('.mosaic figure').forEach(function(f){f.addEventListener('click',function(){var i=f.querySelector('img');im.src=i.src;im.alt=i.alt;d.showModal()})});
+document.querySelectorAll('.gal img').forEach(function(i){i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;d.showModal()})});
 d.addEventListener('click',function(){d.close()});})();
 </script>
 </body>

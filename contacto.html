@@ -24,25 +24,27 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="top solid"><a href="/" aria-label="CIMA Vision, inicio"><img src="logo.png" alt="CIMA" width="46" height="46"></a><nav><a href="/trabajo">Trabajo</a><a href="/nosotros">Nosotros</a><a href="/servicios">Servicios</a><a href="/preguntas">Preguntas</a><a class="wa-link" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." rel="noopener">WhatsApp</a></nav></header>
+<header class="top solid"><a class="logo" href="/">CIMA VISION</a><nav class="main" aria-label="Principal"><a href="/trabajo">Trabajo</a><a href="/nosotros">Nosotros</a><a href="/servicios">Servicios</a><a href="/preguntas">Preguntas</a><a class="btn btn-sm" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." target="_blank" rel="noopener">WhatsApp</a></nav></header>
 
-<main id="top" class="page">
-<section class="sec cta" id="contacto">
-  <h2>¿Listos?</h2>
-  <p class="lede light">La cima no se sube sola. Cuéntanos de tu equipo y armamos el plan.</p>
-  <div class="row">
-    <a class="btn" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." rel="noopener">Escríbenos por WhatsApp</a>
-    <a class="btn ghost" href="https://instagram.com/cima_vision" rel="noopener">@cima_vision</a>
+<main id="top">
+<section class="dark" style="padding-top:150px">
+  <div class="wrap">
+    <p class="kicker">Contacto</p>
+    <h1 style="font-size:clamp(3.6rem,8vw,7rem)">¿Listos?</h1>
+    <p class="lead" style="margin:24px 0 36px">La cima no se sube sola. Cuéntanos de tu equipo y armamos el plan.</p>
+    <a class="btn" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." target="_blank" rel="noopener">WhatsApp · 55 4350 6136</a>
+    <a class="btn" href="https://instagram.com/cima_vision" rel="noopener" style="background:none;color:inherit;border:1px solid currentColor;margin-left:8px">@cima_vision</a>
   </div>
 </section>
-<nav class="next" aria-label="Más páginas"><a href="/preguntas"><span>← Anterior</span>Preguntas</a></nav>
+<div class="wrap pager"><a href="/preguntas">← Preguntas</a><a href="/">Inicio →</a></div>
 </main>
-<footer><span>© 2026 CIMA Vision</span><span>Ciudad de México</span></footer>
+<footer><span>© 2026 CIMA Vision · Ciudad de México</span><a href="https://instagram.com/cima_vision" rel="noopener" style="text-decoration:none">Instagram @cima_vision</a></footer>
+<a class="wa" href="https://wa.me/525543506136?text=Hola%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20con%20CIMA%20Vision." target="_blank" rel="noopener">WhatsApp</a>
 
 <dialog id="lb" aria-label="Foto ampliada"><button type="button" aria-label="Cerrar">CERRAR</button><img alt=""></dialog>
 <script>
 (function(){var d=document.getElementById('lb'),im=d.querySelector('img');
-document.querySelectorAll('.mosaic figure').forEach(function(f){f.addEventListener('click',function(){var i=f.querySelector('img');im.src=i.src;im.alt=i.alt;d.showModal()})});
+document.querySelectorAll('.gal img').forEach(function(i){i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;d.showModal()})});
 d.addEventListener('click',function(){d.close()});})();
 </script>
 </body>
